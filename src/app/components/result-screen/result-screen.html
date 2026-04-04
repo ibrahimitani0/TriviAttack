@@ -1,0 +1,10 @@
+<div class="result-container">
+  <h1>Quiz Completed!</h1>
+  <p>You scored <strong>{{ score }}</strong> out of <strong>{{ total }}</strong>.</p>
+
+  <p *ngIf="score === total">🎉 Perfect Score! Well done!</p>
+  <p *ngIf="score >= total / 2 && score < total">💪 Good job! Try for a perfect score?</p>
+  <p *ngIf="score < total / 2">📚 Keep practicing!</p>
+
+  <button (click)="restartQuiz()">Try Again</button>
+</div>

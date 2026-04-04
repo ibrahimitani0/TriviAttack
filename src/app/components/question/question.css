@@ -1,0 +1,21 @@
+button.correct {
+  background-color: #55ff55; /* bright green */
+  border-color: #00aa00;
+  color: #003300;
+  box-shadow: inset 2px 2px 0 #006600, 3px 3px 0 #003300;
+}
+
+button.incorrect {
+  background-color: #ff5555; /* bright red */
+  border-color: #aa0000;
+  color: #330000;
+  box-shadow: inset 2px 2px 0 #660000, 3px 3px 0 #330000;
+}
+
+button {
+  margin-bottom: 8px;
+}
+
+.next {
+  margin-top: 30px;
+}

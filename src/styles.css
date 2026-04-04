@@ -1,0 +1,138 @@
+/* === Theme Variables === */
+:root {
+  --bg-color: #2b2b2b;
+  --text-color: #e0e0e0;
+  --accent-color: #ffee00;
+  --card-bg: #3c3c3c;
+  --button-bg: #ffcc00;
+  --button-text: #2b2b2b;
+  --border-color: #ffcc00;
+}
+
+[data-theme='light'] {
+  --bg-color: #f8e9cb;
+  --text-color: #2b2b2b;
+  --accent-color: #9f9464;
+  --card-bg: #fdf1b2;
+  --button-bg: #ffcc00;
+  --button-text: #2b2b2b;
+  --border-color: #ffcc00;
+}
+
+/* === Reset & Base === */
+* {
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smooth: never !important;
+  text-rendering: optimizeSpeed !important;
+}
+
+
+body {
+  font-family: 'Press Start 2P', cursive, monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+
+/* === Container === */
+.container, .card {
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--card-bg);
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0 0 #000;
+  border-radius: 0; /* pixel art usually avoids rounding */
+  padding: 20px;
+}
+
+
+/* === Buttons === */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 3px solid var(--border-color);
+  padding: 12px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #000 inset, 3px 3px 0 0 #000;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+button:hover {
+  background-color: #ffdd33;
+  border-color: #ffaa00;
+}
+
+
+button:active {
+  box-shadow:
+    inset 2px 2px 0 #000,
+    inset -2px -2px 0 #999;
+}
+
+/* === Inputs and Selects === */
+select {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  background-color: #9f9464;
+  color: var(--text-color);
+  border: 3px solid var(--border-color);
+  padding: 10px 40px 10px 10px;
+  appearance: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow:0 0 0 1px #000 inset, 3px 3px 0 0 #000;
+  width: 100%;
+  user-select: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23ffcc00' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+select:hover {
+  background-color: #c3b273;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffaa00;
+}
+
+/* === Labels === */
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+/* === Form Group === */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .slider {
+    transform: scale(0.8);
+  }
+}
+

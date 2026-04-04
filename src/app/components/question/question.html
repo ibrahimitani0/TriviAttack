@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card">
+    <h2>Question {{ currentIndex + 1 }} / {{ questions.length }}</h2>
+    <p>{{ decodeHtml(currentQuestion?.question || '') }}</p>
+
+    <div *ngFor="let answer of currentQuestion?.all_answers">
+      <button (click)="selectAnswer(answer)" [class.correct]="answered && answer === currentQuestion?.correct_answer"
+  [class.incorrect]="answered && answer === selectedAnswer && answer !== currentQuestion?.correct_answer">
+        {{ decodeHtml(answer) }}
+      </button>
+    </div>
+
+    <button class="next" [disabled]="!answered" (click)="nextQuestion()">
+      {{ currentIndex + 1 === questions.length ? 'Finish' : 'Next' }}
+    </button>
+  </div>
+</div>

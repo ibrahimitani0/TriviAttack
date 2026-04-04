@@ -1,0 +1,32 @@
+.pixel-toggle {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 32px;
+  background-color: #222;
+  border: 4px solid #fff;
+  box-shadow: 2px 2px 0 #000, inset -2px -2px 0 #444;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive, monospace;
+}
+
+.pixel-toggle input {
+  display: none;
+}
+
+.pixel-toggle .slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0 #000, inset -2px -2px 0 #888;
+  transition: all 0.1s ease-in-out;
+}
+
+.pixel-toggle input:checked + .slider {
+  left: 32px;
+  background-color: #ff0;
+  box-shadow: 2px 2px 0 #000, inset -2px -2px 0 #aaa;
+}

@@ -1,0 +1,31 @@
+.start-screen {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+select, button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #8e7b1d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+}
+
+button:hover {
+  background-color: #b39e00;
+}
